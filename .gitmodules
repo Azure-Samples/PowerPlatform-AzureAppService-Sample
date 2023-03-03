@@ -1,0 +1,3 @@
+[submodule "DataverseBulkDataIntegration/DataverseRestClient"]
+	path = DataverseBulkDataIntegration/DataverseRestClient
+	url = https://github.com/Azure-Samples/Dataverse-Rest-Client.git

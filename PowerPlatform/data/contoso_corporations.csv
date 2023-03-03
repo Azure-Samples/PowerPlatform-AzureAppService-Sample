@@ -1,0 +1,7 @@
+contoso_corporationcode,contoso_corporationid,contoso_corporationname,importsequencenumber,statuscode,statecode,timezoneruleversionnumber,utcconversiontimezonecode,versionnumber,owningbusinessunit,contoso_parentcorporation.contoso_corporationcode
+CORP202,5dd096bb-7ba7-ed11-aad1-0022481e7bae,Contoso Subsidiary India Pvt. Ltd.,,Active,Active,,,1284325,490e383b-47a4-ed11-aad1-0022482ad7f9,CORP002
+CORP201,57c9d097-7ba7-ed11-aad1-0022481e7bae,Contoso Subsidiary USA Pvt. Ltd.,,Active,Active,,,1284321,490e383b-47a4-ed11-aad1-0022482ad7f9,CORP002
+CORP102,2e2058ed-d0a6-ed11-aad1-0022481e7bae,Contoso India Pvt. Ltd.,,Active,Active,,,1284318,490e383b-47a4-ed11-aad1-0022482ad7f9,CORP001
+CORP002,289a2b17-79a7-ed11-aad1-0022481e7bae,Contoso Subsidiary Ltd. HQ,,Active,Active,,,1284301,490e383b-47a4-ed11-aad1-0022482ad7f9,
+CORP101,0c38b0dd-d0a6-ed11-aad1-0022481e7bae,Contoso USA Pvt. Ltd.,,Active,Active,,,1259674,490e383b-47a4-ed11-aad1-0022482ad7f9,CORP001
+CORP001,bf20dace-d0a6-ed11-aad1-0022481e7bae,Contoso Ltd. HQ,,Active,Active,,,1259668,490e383b-47a4-ed11-aad1-0022482ad7f9,
