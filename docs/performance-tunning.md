@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The custom code that inserts bulk data into Dataverse is implemented as a Web API by using [Dataverse REST Client](https://dev.azure.com/CSECodeHub/506592%20-%20Unilever%20-%20Overheads%20Management/_git/Dataverse%20Rest%20Client). This document describes how to fine tune the performance of the data insertion process.
+The custom code that inserts bulk data into Dataverse is implemented as a Web API by using [Dataverse REST Client](https://github.com/Azure-Samples/Dataverse-Rest-Client). This document describes how to fine tune the performance of the data insertion process.
 
 Let us take a look at one of the Dataverse Repository implementation [BudgetLineRepository.cs](../DataverseBulkDataIntegration/ExcelImportService/Repository/BudgetLineRepository.cs) where different approaches are used to insert bulk data into Dataverse. In the following sections, we will discuss these approaches and their performance implications, target use cases in details.
 
