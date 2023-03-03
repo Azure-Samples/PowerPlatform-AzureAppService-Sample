@@ -53,9 +53,9 @@ Following diagram shows the architecture of the above mentioned scenario.
 1. **Azure Monitor:** This is used to monitor the Azure App Service.
 1. **Azure Active Directory:** This is used to authenticate the Azure App Service with Dataverse.
 
-## Demo
+## Solution Demo
 
-TODO: Add a demo video.
+https://user-images.githubusercontent.com/70320868/222704803-5b936650-c086-444e-83cf-6efc8638b80e.mp4
 
 ## Build and Test
 
@@ -67,7 +67,7 @@ This sample implementation contains the following components:
 1. Azure App Service code
 1. Sample Excel files to test the solution
 
-Follow ths detailed steps in the [Build, Deploy and Test](./docs/build-deploy-and-test.md) document to build, deploy and test the implementation.
+Follow the detailed steps in the [Build, Deploy and Test](./docs/build-deploy-and-test.md) document to build, deploy and test the implementation.
 
 ## Additional Information
 
