@@ -1,0 +1,5 @@
+contoso_departmentcode,contoso_departmentid,contoso_departmentname,importsequencenumber,statuscode,statecode,timezoneruleversionnumber,utcconversiontimezonecode,versionnumber,owningbusinessunit
+1004,4a58f696-d2a6-ed11-aad1-0022481e7bae,Human Resources,,Active,Active,,,1264204,490e383b-47a4-ed11-aad1-0022482ad7f9
+1003,77eb568d-d2a6-ed11-aad1-0022481e7bae,Finance,,Active,Active,,,1264201,490e383b-47a4-ed11-aad1-0022482ad7f9
+1002,1c96c984-d2a6-ed11-aad1-0022481e7bae,Sales,,Active,Active,,,1264194,490e383b-47a4-ed11-aad1-0022482ad7f9
+1001,24b40571-d2a6-ed11-aad1-0022481e7bae,Marketing,,Active,Active,,,1264188,490e383b-47a4-ed11-aad1-0022482ad7f9

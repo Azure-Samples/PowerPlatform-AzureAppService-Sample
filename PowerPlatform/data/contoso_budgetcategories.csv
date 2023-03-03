@@ -1,0 +1,7 @@
+contoso_budgetcategorycode,contoso_budgetcategoryid,contoso_budgetcategoryname,importsequencenumber,statuscode,statecode,timezoneruleversionnumber,utcconversiontimezonecode,versionnumber,owningbusinessunit
+1006,a4b06a31-d4a6-ed11-aad1-0022481e7bae,Advertisement,,Active,Active,,,1266945,490e383b-47a4-ed11-aad1-0022482ad7f9
+1005,312e6c27-d4a6-ed11-aad1-0022481e7bae,Employee Salary,,Active,Active,,,1266941,490e383b-47a4-ed11-aad1-0022482ad7f9
+1004,60abc11f-d4a6-ed11-aad1-0022481e7bae,Legal Fees,,Active,Active,,,1266938,490e383b-47a4-ed11-aad1-0022482ad7f9
+1003,d11e6d15-d4a6-ed11-aad1-0022481e7bae,Audit Fees,,Active,Active,,,1266935,490e383b-47a4-ed11-aad1-0022482ad7f9
+1002,91c3200d-d4a6-ed11-aad1-0022481e7bae,Utilities,,Active,Active,,,1266932,490e383b-47a4-ed11-aad1-0022482ad7f9
+1001,f91f8f74-d3a6-ed11-aad1-0022481e7bae,Rent,,Active,Active,,,1266928,490e383b-47a4-ed11-aad1-0022482ad7f9
