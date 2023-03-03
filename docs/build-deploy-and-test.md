@@ -101,7 +101,7 @@ This document contains the detailed steps to build, deploy and test the implemen
 
 ## Deploy the Power Platform Solution
 
-1. Import the solution file [ContosoBudgetManagement_1_0_0_1.zip](../PowerPlatform/solution/ContosoBudgetManagement_1_0_0_1.zip) into your Power Platform environment by following the steps [here](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/import-update-export-solutions)
+1. Import the solution file [ContosoBudgetManagement_1_0_0_1.zip](https://github.com/Azure-Samples/PowerPlatform-AzureAppService-Sample/releases/download/powerplatform-solution/ContosoBudgetManagement_1_0_0_1.zip) into your Power Platform environment by following the steps [here](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/import-update-export-solutions)
 1. Import the sample master data for following tables by following the steps [here](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-import-export#import-the-file)
     1. `Corporation` -  [contoso_corporations.csv](../PowerPlatform/data/contoso_corporations.csv)
     1. `Department` -  [contoso_departments.csv](../PowerPlatform/data/contoso_departments.csv)
