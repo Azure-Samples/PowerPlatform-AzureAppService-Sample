@@ -1,0 +1,135 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "DemoExcelImportServicePlanName": {
+            "type": "string",
+            "defaultValue": "DemoExcelImportServicePlan",
+            "minLength": 1
+        },
+        "DemoExcelImportServicePlanSKU": {
+            "type": "string",
+            "allowedValues": [
+                "Basic",
+                "PremiumV2"
+            ],
+            "defaultValue": "Basic"
+        },
+        "DemoExcelImportServicePlanSKUCode": {
+            "type": "string",
+            "allowedValues": [
+                "B1",
+                "B2",
+                "P1v2",
+                "P2v2"
+            ],
+            "defaultValue": "B2"
+        },
+        "DemoExcelImportServicePlanWorkerSize": {
+            "type": "string",
+            "allowedValues": [
+                "0",
+                "1",
+                "3",
+                "4"
+            ],
+            "defaultValue": "1"
+        },
+        "LogAnalyticsWorkspaceName": {
+            "type": "string",
+            "defaultValue": "DemoLogAnalyticsWorkspace"
+        },
+        "LogAnalyticsWorkspaceSKU": {
+            "type": "string",
+            "allowedValues": [
+                "Free",
+                "Standalone",
+                "PerNode",
+                "PerGB2018"
+            ],
+            "defaultValue": "PerGB2018"
+        },
+        "ApplicationInsightsName": {
+            "type": "string",
+            "defaultValue" : "DemoApplicationInsights"
+        }
+    },
+    "resources": [
+        {
+            "name": "[parameters('DemoExcelImportServicePlanName')]",
+            "type": "Microsoft.Web/serverfarms",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2018-11-01",
+            "kind": "linux",
+            "dependsOn": [],
+            "tags": {
+                "displayName": "DemoExcelImportServicePlan"
+            },
+            "properties": {
+                "name": "[parameters('DemoExcelImportServicePlanName')]",
+                "workerSize": "[parameters('DemoExcelImportServicePlanWorkerSize')]",
+                "workerSizeId": "[parameters('DemoExcelImportServicePlanWorkerSize')]",
+                "numberOfWorkers": 1,
+                "reserved": true,
+                "zoneRedundant": false
+            },
+            "sku": {
+                "Tier": "[parameters('DemoExcelImportServicePlanSKU')]",
+                "Name": "[parameters('DemoExcelImportServicePlanSKUCode')]"
+            }
+        },
+        {
+            "name": "[variables('DemoExcelImportServiceAppName')]",
+            "type": "Microsoft.Web/sites",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2015-08-01",
+            "dependsOn": [
+                "[concat('Microsoft.Web/serverfarms/', parameters('DemoExcelImportServicePlanName'))]"
+            ],
+            "tags": {
+                "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', parameters('DemoExcelImportServicePlanName'))]": "Resource",
+                "displayName": "DemoExcelImportServiceApp"
+            },
+            "properties": {
+                "name": "[variables('DemoExcelImportServiceAppName')]",
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms/', parameters('DemoExcelImportServicePlanName'))]"
+            }
+        },
+        {
+            "apiVersion": "2017-03-15-preview",
+            "name": "[parameters('LogAnalyticsWorkspaceName')]",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "DemoLogAnalyticsWorkspace"
+            },
+            "type": "Microsoft.OperationalInsights/workspaces",
+            "properties": {
+                "sku": {
+                    "name": "[parameters('LogAnalyticsWorkspaceSKU')]"
+                }
+            }
+        },
+        {
+            "name": "[parameters('ApplicationInsightsName')]",
+            "type": "microsoft.insights/components",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "DemoApplicationInsights"
+            },
+            "apiVersion": "2020-02-02-preview",
+            "dependsOn": [
+                "[concat('Microsoft.OperationalInsights/workspaces/', parameters('LogAnalyticsWorkspaceName'))]"
+            ],
+            "properties": {
+                "ApplicationId": "[parameters('ApplicationInsightsName')]",
+                "Application_Type": "web",
+                "Flow_Type": "Redfield",
+                "Request_Source": "rest",
+                "WorkspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces/', parameters('LogAnalyticsWorkspaceName'))]"
+            }
+        }
+    ],
+    "variables": {
+        "DemoExcelImportServiceAppName": "[concat('DemoExcelImportServiceApp', uniqueString(resourceGroup().id))]"
+    }
+}

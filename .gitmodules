@@ -1,0 +1,3 @@
+[submodule "DataverseBulkDataIntegration/DataverseRestClient"]
+	path = DataverseBulkDataIntegration/DataverseRestClient
+	url = https://dev.azure.com/CSECodeHub/506592%20-%20Unilever%20-%20Overheads%20Management/_git/Dataverse%20Rest%20Client
